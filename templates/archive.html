@@ -1,0 +1,17 @@
+
+<!-- extend base layout -->
+{% extends "lay_out.html" %}
+
+{% block content %}
+<div class="blog">
+    {% for post in posts %}
+  <div class="conteudo" style="margin:5px;">
+    <div class="post-info">
+       {{ post[2] }}
+    </div>
+    <h1><a style="color: #868383;" href="/post/{{ post[0]}}">{{ post[1]}} </a></h1>
+  </div>
+      {% endfor %}
+</div>
+
+{% endblock %}

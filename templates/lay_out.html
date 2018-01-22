@@ -1,0 +1,54 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} || 咩</title>
+    {% else %}
+    <title>咩</title>
+    {% endif %}
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+</head>
+<body>
+<header class="header">
+  <ul>
+    <li class="cor-1"></li>
+    <li class="cor-2"></li>
+    <li class="cor-3"></li>
+    <li class="cor-4"></li>
+    <li class="cor-5"></li>
+  </ul>
+  </header>
+<div class="wrap">
+
+
+    <nav class="menu">
+      <ul>
+        <li>
+          <a href="/home">小窝</a>
+        </li>
+        <li>
+          <a href="/archive">故事</a>
+        </li>
+        <li>
+          <a href="/about">关于咩</a>
+        </li>
+      </ul>
+    </nav>
+    <aside class="sidebar">
+          <div class="widget">
+            <h2>关于我</h2>
+            <p>嗨嗨！大家好我是 <b>口羊咩</b>. 一只在香港毕业的 <b>研究生</b>. 喜欢<b>混音</b>和<b>编程</b>.</p>
+          </div>
+          <div class="widget">
+            <h2>戳我：</h2>
+            <p>E-mail:<b>panda93222@gmail.com</b></p>
+            <p>QQ:<b>380863541</b></p>
+            <p>wechat:<b>panda93222</b></p>
+          </div>
+    </aside>
+    {% block content %}
+
+    {% endblock %}
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传页面</title>
+</head>
+<body>
+
+{% if messages %}
+    <ul class=flashes>
+      <li>{{ messages }}</li>
+    </ul>s
+{% endif %}
+
+<form action = "/upload_post" method = "POST" enctype = "multipart/form-data">
+  Date: <input type="text" name="upload_date"><br>
+  Title: <input type="text" name="upload_title"><br>
+  Content:<br>
+    <textarea rows="30" cols="50" name="upload_content"></textarea></br>
+  Image: <input name="upload_image" type="file">
+  <input type="submit" value="Submit" style="text-align:right;">
+</form>
+</body>
+</html>

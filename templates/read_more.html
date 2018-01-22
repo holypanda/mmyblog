@@ -1,0 +1,21 @@
+{% extends "lay_out.html" %}
+
+{% block content %}
+<div class="blog">
+  {% if detail_article %}
+  <div class="conteudo">
+    <div class="post-info">
+      Posted by 口羊咩
+      <br>
+       {{ detail_article[2]}}
+    </div>
+    <img src="../{{detail_article[4]}}">
+    <h1> {{ detail_article[1] }} </h1>
+    <hr>
+    <p>
+      {{ detail_article[3] }}
+    </p>
+  </div>
+    {% endif %}
+  </div>
+{% endblock %}
